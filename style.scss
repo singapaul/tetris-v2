@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "lazenby";
+  src: url("./lazenby-computer/LazenbyCompSmooth.ttf");
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 3fr 1fr;
+  width: 390px;
+  height: 600px;
+  padding: 30px;
+  font-family: lazenby;
+  background: aqua;
+}
+
+// game grid
+.grid {
+  width: 200px;
+  height: 400px;
+  background-color: yellow;
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: 1/1/2/2;
+}
+
+// stats grid
+.stats {
+  grid-area: 1/2/2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+
+  #start-button {
+    font-family: lazenby;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 0 5px 5px;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 0.2em gray;
+    cursor: pointer;
+  }
+
+  #start-button:active {
+    box-shadow: none;
+    position: relative;
+    top: 0.2em;
+  }
+
+  .logoTitle {
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+}
+
+// controls
+.controller-pad {
+  grid-area: 2/1/3/3;
+  position: relative;
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  &__button {
+    font-weight: 900;
+    font-family: lazenby;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px pink, -1px -1px maroon;
+    line-height: 1.5em;
+    text-align: center;
+    display: inline-block;
+    width: 1.5em;
+    -webkit-border-radius: 0.75em;
+    -moz-border-radius: 0.75em;
+    -o-border-radius: 0.75em;
+    border-radius: 0.75em;
+    background-color: blue;
+    color: white;
+    -webkit-box-shadow: 0 0.2em maroon;
+    -moz-box-shadow: 0 0.2em maroon;
+    -o-box-shadow: 0 0.2em maroon;
+    box-shadow: 0 0.2em maroon;
+    margin: 5px;
+    padding-left: 5px;
+  }
+
+  &__button:active {
+    box-shadow: none;
+    position: relative;
+    top: 0.2em;
+  }
+
+  // button layout
+  #leftButton {
+    grid-area: 2/1/3/2;
+    background-color: blue;
+  }
+  #rightButton {
+    grid-area: 2/3/3/4;
+    background-color: orange;
+  }
+  #upButton {
+    grid-area: 1/2/2/3;
+    background-color: red;
+  }
+  #downButton {
+    grid-area: 3/2/4/3;
+    background-color: green;
+  }
+  #dropButton {
+    grid-area: 2/5/3/6;
+    background-color: purple;
+  }
+  #miscButton {
+    grid-area: 1/6/2/7;
+    background-color: yellow;
+  }
+}
+
+.grid div {
+  height: 20px;
+  width: 20px;
+}
+
+.tetromino {
+  background-color: blue;
+}
+
+.mini-grid {
+  width: 80px;
+  height: 80px;
+  flex-wrap: wrap;
+  display: flex;
+  background-color: yellow;
+  margin-left: 50px;
+}
+
+.mini-grid div {
+  height: 20px;
+  width: 20px;
+}
