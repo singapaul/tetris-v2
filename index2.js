@@ -4,6 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let squares = Array.from(document.querySelectorAll(".grid div"));
   const scoreDisplay = document.querySelector("#score");
   const startButton = document.querySelector("#start-button");
+  const leftButton = document.querySelector("#leftButton");
+  const rightButton = document.querySelector("#rightButton");
+  const upButton = document.querySelector("#upButton");
+  const downButton = document.querySelector("#downButton");
+  const dropButton = document.querySelector("#dropButton");
+  const miscButton = document.querySelector("#miscButton");
+
   let timerID;
   const width = 10;
   let nextRandom = 0;
@@ -89,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
     freeze();
   };
 
-
   // assignign functions to keyCodes
 
   const control = (e) => {
@@ -107,8 +113,12 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("inactive key");
     }
   };
-
   document.addEventListener("keyup", control);
+
+  // Button controls
+
+  upButton.addEventListener("click", rotate);
+  downButton.addEventListener("click", moveDown);
 
   // Writing the freeze function
   // the some() operator applies logic to some of the operators in outr array
@@ -232,6 +242,8 @@ document.addEventListener("DOMContentLoaded", () => {
       timerID = setInterval(moveDown, 300);
       nextRandom = Math.floor(Math.random() * theTetrominos.length);
       displayShape();
+      leftButton.addEventListener("click", moveLeft);
+      rightButton.addEventListener("click", moveRight);
     }
   });
 
