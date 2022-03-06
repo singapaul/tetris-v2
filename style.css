@@ -22,7 +22,7 @@
 .grid {
   width: 200px;
   height: 400px;
-  background-color: yellow;
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
   grid-area: 1/1/2/2;
@@ -142,7 +142,7 @@
   height: 80px;
   flex-wrap: wrap;
   display: flex;
-  background-color: yellow;
+  background-color: white;
   margin: 0 auto;
 }
 
