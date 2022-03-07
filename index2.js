@@ -94,6 +94,19 @@ document.addEventListener("DOMContentLoaded", () => {
     currentPosistion += width;
     draw();
     freeze();
+    console.log(current);
+    console.log(currentPosistion);
+    console.log(
+      current.some((index) =>
+        squares[currentPosistion + index].classList.contains("taken")
+      )
+    );
+  };
+
+  const dropDown = () => {
+    console.log("drop down activated");
+    // while the cell at current position + width does not have the class taken or
+    // while (currentposistion + width = cell with taken is not true){keep moving down}
   };
 
   // assignign functions to keyCodes

@@ -18,6 +18,8 @@
   padding: 30px;
   font-family: lazenby;
   background: aqua;
+  align-self: center;
+  justify-self: center;
 }
 
 // game grid
@@ -139,7 +141,7 @@
   border: solid 1px black;
 }
 
-.hidden{
+.hidden {
   display: none;
   visibility: hidden;
 }
@@ -154,7 +156,7 @@
   flex-wrap: wrap;
   display: flex;
   background-color: white;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .mini-grid div {
@@ -163,3 +165,12 @@
   border: solid 1px black;
 }
 // hi
+
+body {
+  background-image: url("./background.jpeg");
+  background-repeat:round;
+  background-position: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
