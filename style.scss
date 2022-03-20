@@ -9,6 +9,8 @@
   src: url("./lazenby-computer/LazenbyCompSmooth.ttf");
 }
 
+body{height: 100vh;}
+
 .container {
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -173,4 +175,5 @@ body {
   display: flex;
   align-content: center;
   justify-content: center;
+  height: 100vh;
 }
