@@ -1,5 +1,6 @@
 ## Tetris
 
+## ![](./Tetris.png)
 
 Javascript based version of Tetris, built in order to expand understanding of implementing JS based logic and advanced DOM manipulation techniques.
 
